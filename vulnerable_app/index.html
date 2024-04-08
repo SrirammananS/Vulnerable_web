@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Add custom styles here */
+        .loading {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2px 0;
+            background-color: #ff9800; /* Orange color */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <img src="images/eviden-aab-orange.png" alt="Eviden Logo" style="height: 100px;"> <!-- Replace with your logo -->
+</header>
+
+<!-- Loading Content -->
+<div id="loading" class="loading">
+    <p>Loading content...</p>
+</div>
+
+<!-- Main Content (Initially Hidden) -->
+<div id="mainContent" class="container hidden">
+    <h2>Login</h2>
+    <form action="login.php" method="post">
+        <div class="input-field">
+            <input type="text" id="das_id" name="das_id" required autocomplete="off">
+            <label for="das_id">DAS ID:</label>
+        </div>
+        <div class="input-field">
+            <input type="password" id="password" name="password" autocomplete="off" required>
+            <label for="password">Password:</label>
+        </div>
+        <button class="btn waves-effect waves-light " type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+</div>
+
+<!-- Footer -->
+<footer class="footer orange darken-3">
+    <p>&copy; <?php echo date("Y"); ?> Srirammanan 2024 | Prepared for internal use, strictly no public or violation</p>
+</footer>
+
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+    // Show main content and hide loading content when page is fully loaded
+    window.addEventListener('load', function() {
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('mainContent').classList.remove('hidden');
+    });
+
+    // Update copyright year
+    document.querySelector(".footer p").innerHTML += new Date().getFullYear();
+</script>
+</body>
+</html>

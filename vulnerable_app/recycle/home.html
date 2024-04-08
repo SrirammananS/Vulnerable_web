@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerable App - Home</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Vulnerable App</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+
+<div class="container mt-5">
+    <h2>Welcome, [Username]</h2>
+    <a href="logout.php" class="btn btn-danger">Logout</a>
+
+    <div class="mt-4">
+        <button type="button" class="btn btn-primary modal-trigger" data-target="addDataModal">
+            Add New Data
+        </button>
+    </div>
+
+    <div id="addDataModal" class="modal">
+        <div class="modal-content">
+            <h4>Add New Data</h4>
+                    <form action="add.php" method="post">
+                        <div class="form-group">
+                            <label for="udid">UDID:</label>
+                            <input type="text" class="form-control" id="udid" name="udid" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile_model">Mobile Model:</label>
+                            <input type="text" class="form-control" id="mobile_model" name="mobile_model" required>
+                        </div>
+                        <!-- Add other input fields here (e.g., os_version, jail_status, etc.) -->
+                        <!-- Example: -->
+                        <div class="form-group">
+                            <label for="os_version">OS Version:</label>
+                            <input type="text" class="form-control" id="os_version" name="os_version" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Jail/Root_Status">OS Version:</label>
+                            <input type="text" class="form-control" id="Jail/Root_Status" name="Jail/Root_Status" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Phone_Lock_Pin">OS Version:</label>
+                            <input type="text" class="form-control" id="Phone_Lock_Pin" name="Phone_Lock_Pin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Phone_Account_Password">OS Version:</label>
+                            <input type="text" class="form-control" id="Phone_Account_Password" name="Phone_Account_Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Current_User_DAS_ID">OS Version:</label>
+                            <input type="text" class="Current_User_DAS_ID" id="Current_User_DAS_ID" name="os_version" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="Received_From">OS Version:</label>
+                            <input type="text" class="form-control" id="Received_From" name="Received_From" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Received_On">OS Version:</label>
+                            <input type="text" class="form-control" id="Received_On" name="Received_On" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Submission_To">OS Version:</label>
+                            <input type="text" class="form-control" id="Submission_TO" name="Submission_To" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Submission_On">OS Version:</label>
+                            <input type="text" class="form-control" id="Submission_On" name="Submission_On" required>
+                        </div>
+
+                        <!-- Repeat this for other fields -->
+                        <button type="submit" name="add" class="btn btn-primary">Add Data</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

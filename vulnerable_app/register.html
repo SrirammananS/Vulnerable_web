@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Add custom styles here */
+        footer {
+            text-align: center;
+            padding: 5px 0;
+            background-color: #ff9800; /* Orange color */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 9999;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease forwards;
+            animation-delay: 1s;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Registration</h2>
+    <?php if(isset($_SESSION['message'])): ?>
+    <div class="alert <?php echo strpos($_SESSION['message'], 'successful') !== false ? 'alert-success' : 'alert-danger'; ?>" role="alert">
+        <?php echo $_SESSION['message']; ?>
+    </div>
+    <?php unset($_SESSION['message']); ?>
+    <?php endif; ?>
+    <form action="register.php" method="post">
+        <div class="input-field">
+            <input type="text" id="username" name="username" required>
+            <label for="username">Username:</label>
+        </div>
+        <div class="input-field">
+            <input type="password" id="password" name="password" required>
+            <label for="password">Password:</label>
+        </div>
+        <div class="input-field">
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <label for="confirm_password">Confirm Password:</label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="das_id" name="das_id" required>
+            <label for="das_id">DAS ID:</label>
+        </div>
+        <button class="btn waves-effect waves-light orange" type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="index.html">Login here</a></p>
+</div>
+
+<footer class="orange darken-3">
+    <p>&copy; <?php echo date("Y"); ?> Srirammanan 2024 | Prepared for internal use, strictly no public or violation</p>
+</footer>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

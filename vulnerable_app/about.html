@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+        .disclaimer {
+            margin-top: 20px;
+            font-style: italic;
+            color: #666;
+        }
+        /* Animation */
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .slide-in {
+            animation: slideInFromLeft 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div class="container slide-in">
+    <h1>About Us</h1>
+    <p>Welcome to our website! Our goal is to provide a platform for practicing penetration testing and learning about web security vulnerabilities.</p>
+    <p>We encourage users to explore the website, discover vulnerabilities, and suggest improvements to enhance security. Please keep in mind that this website intentionally contains vulnerabilities for educational purposes.</p>
+    <h2>Contribute Your Ideas</h2>
+    <p>We value your input! If you have any ideas for new features, security enhancements, or ways to improve the user experience, please feel free to share them with us.</p>
+    <p>To submit your ideas or report vulnerabilities, you can contact us via email at <a href="mailto:s-sriram.manan@eviden.com">s-sriram.manan@eviden.com</a>.</p>
+    <div class="disclaimer">
+        <h3>Disclaimer</h3>
+        <p>This website is designed for educational purposes only. Any attempt to exploit vulnerabilities for malicious purposes is strictly prohibited. Use the information and tools provided on this website responsibly and ethically.</p>
+    </div>
+</div>
+
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
